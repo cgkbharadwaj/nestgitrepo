@@ -89,6 +89,8 @@
 				<configuration>
 					<fork>true</fork>
 					<executable>%JAVA_HOME%\bin\javac.exe</executable>
+					<debug>true</debug>
+        			<debuglevel>lines,vars,source</debuglevel> 
 				</configuration>
 			</plugin>
 			<plugin>
