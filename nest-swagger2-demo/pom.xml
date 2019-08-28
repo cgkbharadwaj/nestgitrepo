@@ -18,7 +18,7 @@
 		<version>2.1.5.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-<!-- test github webhook -->
+	<!-- test github webhook -->
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -83,13 +83,16 @@
 
 	<build>
 		<plugins>
+			<!--<plugin> <artifactId>maven-compiler-plugin</artifactId> <version>3.1</version> 
+				<configuration> <fork>true</fork> <executable>%JAVA_HOME%\bin\javac.exe</executable> 
+				<debug>true</debug> </configuration> </plugin> -->
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<!-- <version>3.1</version> -->
+				<version>3.5.1</version>
 				<configuration>
-					<fork>true</fork>
-					<executable>%JAVA_HOME%\bin\javac.exe</executable>
-					<debug>true</debug>
+					<source>1.8</source>
+					<target>1.8</target>
 				</configuration>
 			</plugin>
 			<plugin>
